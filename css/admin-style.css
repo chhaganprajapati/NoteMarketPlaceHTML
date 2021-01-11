@@ -1,0 +1,731 @@
+/* ===================================
+    Default Theme
+    ----------------------------------
+    Fonts : Open Sans
+    ----------------------------------
+    Colors:
+        White:           #fff
+        Black:           #000
+        Rich Blue:       #6255a5
+        Night Rider:     #333333
+    ----------------------------------
+    Description
+    Admin pages CSS
+    ----------------------------------
+   
+=================================== */
+
+
+/* ===================================
+            Html,Body
+=================================== */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: #333333;
+    font-family: "Open Sans",sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", sans-serif;
+}
+
+.box {
+    padding: 0 12.5%;
+}
+
+.box .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+button:focus {
+    outline: none;
+}
+/* ===================================
+            Navbar
+=================================== */
+.navbar {
+    height: 100px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+    z-index: 2;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+ul.navbar-nav > li {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+}
+
+ul.navbar-nav > li > a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+    color: #333333;
+    transition: all 50ms linear;
+    padding: 7px 0; 
+}
+
+ul.navbar-nav > li > a > button {
+    background-color: #6255a5;
+    width: 89px;
+    height: 40px;
+    border-radius: 3px;
+    color: #ffffff;
+    line-height: 22px;
+    font-weight: 600;
+    border: none;
+}
+
+ul.navbar-nav > li > a > img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a.active {
+    color: #6255a5;
+    border-bottom: 3px solid #6255a5;
+}
+
+ul.navbar-nav > li > a > button:hover {
+    background-color: #ffffff;
+    border: 1px solid #6255a5;
+    color: #6255a5;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    left: -80px;
+    top: 44px; 
+    padding: 14px 0;
+    min-width: 230px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu .dropdown-item,
+.profile-table-icons .dropdown .dropdown-menu .dropdown-item {
+    color: #333333;
+    padding: 8px 30px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu .dropdown-item:hover,
+.profile-table-icons .dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #6255a5;
+    color: #ffffff !important;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+/* ===================================
+            Tables
+=================================== */
+.admin-table {
+    margin-bottom: 60px;
+}
+
+.admin-table h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+}
+
+.admin-table h3 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin-bottom: 20px;  
+    margin-top: 160px;
+}
+
+.admin-table h4 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 10px;  
+    margin-top: 10px;
+}
+
+.admin-table button {
+    background-color: #6255a5;
+    color: #fff;
+    padding: 0 25px;
+    height: 50px;
+    border-radius: 3px;
+    border: none;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+} 
+
+.admin-table .search {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a;
+    padding: 15px 0;
+    background: url("../images/Dashboard/search.jpg") left no-repeat;
+    background-position-x: 15px;
+    padding-left: 40px;
+    margin-bottom: 20px;
+    margin-right: 8px;
+}
+
+.admin-table .search::placeholder {
+    color: #8a8a8a;
+}
+
+.admin-table .search:focus {
+   outline: 0;
+   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.08);
+}
+
+.form-control {
+    border: 1px solid #d1d1d1;
+    height: 50px;
+    border-radius: 3px;
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    color: #8a8a8a;
+}
+
+.admin-table select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+
+.admin-table .arrow-select {
+    float: right;
+    margin-right: 15px;
+    margin-top: -30px;
+}
+
+.admin-table .search-button {
+    background-color: #6255a5;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    border: none;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.dataTables_scroll {
+    border: 1px solid #d1d1d1 !important;
+    border-radius: 3px;
+}
+
+.datatable tr {
+    height: 75px;
+}
+
+.datatable thead tr {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600 !important;
+    line-height: 20px;
+}
+
+.datatable tbody td {
+    padding: 10px 18px !important;
+    background-color:transparent !important;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+} 
+
+.datatable tbody td button {
+    width: 112px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    color: #ffffff;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    padding: 0;
+    text-transform: none;
+}
+
+.datatable tbody td button.approve {
+    background-color: #28a745;
+}
+
+.datatable tbody td button.reject {
+    background-color: #ff3636;
+}
+
+.datatable tbody td button.inreview {
+    background-color: #cccccc;
+}
+
+.datatable tbody tr {
+    background-color:transparent !important;
+}
+
+table.dataTable.display tbody tr:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.dataTables_scrollHead table.dataTable thead th {
+    border-bottom: 1px solid #d1d1d1 !important;
+}
+
+.dataTables_scrollBody {
+    border-bottom: none !important;
+    }
+
+table.dataTable.display tbody td {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.action-icons{
+    display: flex;
+    align-items: center;
+}
+
+.action-icons .edit-icon {
+    margin-right: 20px;
+}
+
+.action-icons .view-icon {
+    margin-left: 20px;
+}
+
+.profile-table-icons .dropdown .dropdown-menu {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    border: none;
+    padding: 14px 0;
+}
+
+/* Datatable pagination */
+.dataTables_paginate.paging_simple_numbers {
+    float: none;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.dataTables_wrapper .dataTables_paginate span .paginate_button {
+    background: transparent !important;
+    color: #333333 !important;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dataTables_wrapper .dataTables_paginate span .paginate_button.current {    
+    background: #6255a5 !important;
+    color: #ffffff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate span .paginate_button:hover {
+    border: 1px solid #6255a5 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous,
+.dataTables_wrapper .dataTables_paginate .paginate_button.next {
+    visibility: hidden;
+    position: relative;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous::after {
+    visibility: visible;
+    position: absolute;
+    top: -6px;
+    right: 30px;
+    content: url("../images/front/left-arrow.png");
+    font-size: 30px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next::after {
+    visibility: visible;
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    content: url("../images/front/right-arrow.png");
+    font-size: 30px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    color:#6255a5 !important;
+}
+ 
+.color-text {
+    color: #6255a5;
+}
+/* ===================================
+            Footer
+=================================== */
+footer {
+    border-top: 1px solid #d1d1d1;
+    height: 100px;
+}
+
+footer p {
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #333333;
+    margin: 40px 0;
+}
+
+/* ===================================
+            Dashboard
+=================================== */
+#dashboard-admin {
+    margin-top: 160px;
+    margin-bottom: 60px;
+}
+
+#dashboard-admin h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin-bottom: 20px;
+}
+
+.dashboard-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 151px;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    padding: 0 20px;
+}
+
+.dashboard-item h4 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+    color: #6255a5;
+}
+
+.dashboard-item h6 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+/* ===================================
+            Form elements
+=================================== */
+.form-details {
+    margin-top: 160px;
+}
+
+.form-details h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin-bottom: 30px;
+} 
+
+.form-details label {
+    font-family: "Open Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+.form-details .form-control {
+    border: 1px solid #d1d1d1;
+    height: 50px;
+    border-radius: 3px;
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.form-details button {
+    background-color: #6255a5;
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+    color: #fff;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 60px;
+    border: none;
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+
+figcaption{
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 20px;
+    color: #8a8a8a;
+}
+
+.upload{
+    cursor: pointer;
+    width: auto;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+    padding: 18px;
+    margin-bottom: 30px;
+}
+
+.form-details select {
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
+
+.arrow-select {
+    float: right;
+    margin-right: 15px;
+    margin-top: -60px;
+}
+
+/* ===================================
+        Notes details page
+=================================== */
+#notes-details {
+    margin-top: 160px;
+}
+
+#notes-details hr {
+    background-color: #d1d1d1;
+    margin-top: 50px;
+}
+
+#notes-details h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+    margin-bottom: 20px;
+}
+
+#notes-details-left img {
+    width: 240px;
+    height: 300px;
+    margin-right: 40px;
+}
+
+#notes-details-left h3 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+}
+
+#notes-details-left h6 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+#notes-details-left p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+#notes-details-left button {
+    background-color: #6255a5;
+    width: 204px;
+    height: 50px;
+    border-radius: 3px;
+    color: #fff;
+    font-family: "Open Sans",sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    border: none;
+    text-transform: uppercase;
+}
+
+#notes-details-right .label {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    color: #333333;
+}
+
+#notes-details-right .data {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #6255a5;
+}
+
+#notes-details-right .spam {
+    font-size: 14px;
+    line-height: 18px;
+    color: #df3434;
+    margin-top: 15px;
+}
+
+#notes-preview {
+    margin: 60px 0;
+}
+
+#notes-preview h2 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    color: #6255a5;
+    margin-bottom: 20px;
+}
+
+#pdf {
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    border: 1px solid #d1d1d1;
+}
+
+#pdf iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 104%;
+    height: 105%;
+    border-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#customer-reviews {
+    padding: 3.66%;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+#customer-reviews .customer-review {
+    margin-top: 1px;
+    padding: 0;
+}
+
+#customer-reviews .customer-review img {
+    max-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#customer-reviews .customer-review h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#customer-reviews .customer-review p {
+    font-size: 16px;
+    line-height: 24px;
+    margin:0;
+    margin-top: 7px;
+}
+
+.rating-star {
+    margin-top: 5px;
+}
+
+.rating-star img {
+    height: 20px !important;
+    width: 20px;
+    margin-bottom: 5px;
+    border-radius: 0 !important;
+}
+
+/* ===================================
+        Member Details page
+=================================== */
+#member-details {
+    margin-top: 160px;
+    margin-bottom: 60px;
+}
+
+#member-details .container-fluid {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #d1d1d1 !important;
+}
+
+#member-details h2{
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    margin-bottom: 20px;
+}
+
+#member-details img {
+    width: 155px;
+    height: 155px;
+    margin-top: 5px;
+}
+
+#member-details #text-left {
+    border-right: 1px solid #d1d1d1;
+}
+
+#member-details .label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    color: #333333;
+}
+
+#member-details .data {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #6255a5;
+    padding-left: 0;
+}

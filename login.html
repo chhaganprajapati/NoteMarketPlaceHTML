@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Title-->
+        <title>NotesMarketPlace-Login</title>
+
+        <!--Meta tags-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <!--bootstarp css-->
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+        <!--Custom css-->
+        <link rel="stylesheet" href="css/form-style.css">
+    </head>
+    <body>
+
+            <!-- login form -->
+            <div class="form-container">
+
+                <!-- logo -->
+                <div class="content-logo text-center">
+                    <img src="images/pre-login/top-logo.png">
+                </div>
+
+                <!-- Form content -->
+                <form action="#" class="form-content">
+
+                    <h2>Login</h2>
+                    <p>Enter your email address and password to login</p>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="exampleInputEmail1">Email</label>
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-6" style="padding-left: 0;">
+                                    <label for="exampleInputPassword1">Password </label>
+                                </div>
+                                <div class="col-md-6 text-right col-6" style="padding-right: 0;">
+                                    <a href="forgot_password.html" id="forgot-pass">Forgot Password?</a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <diV class="row">
+                            <div class="col-md-12">
+                                <input type="password" id="password-field" class="form-control" placeholder="Enter your password">
+                                <span toggle="#password-field" class="toggle-password eye"><img src="images/front/eye.png"></span>
+                            </div>
+                        </diV>
+                    </div>
+
+                    <div class="check-box">
+                        <input type="checkbox" class="ckeck mb-0">
+                        <span>Remember Me</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit">LOGIN</button>
+                        </div>
+                    </div>
+                    
+                    <h4>Don't have an account?<a href="signup.html" style="color: #6255a5;text-decoration: none;"> Sign Up</a></h4>
+                </form>
+        </div>
+
+        <!--JQuery-->
+        <script src="js/jquery.js"></script>
+
+        <!--bootstarp js-->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+
+        <!--Custom JS-->
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Title-->
+        <title>NotesMarketPlace-Sign Up</title>
+
+        <!--Meta tags-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <!--bootstarp css-->
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+
+        <!--Custom css-->
+        <link rel="stylesheet" href="css/form-style.css">
+    </head>
+    <body>
+
+        <!-- Signup form -->
+        <div class="form-container">
+
+                <!-- logo -->
+                <div class="content-logo text-center">
+                    <img src="images/pre-login/top-logo.png">
+                </div>
+
+                <!-- Form content -->
+                <form action="#" class="form-content">
+
+                    <h2>Create an Account</h2>
+                    <p>Enter your details to signup</p>
+                    
+                    <div>
+                        <label>First Name *</label>
+                        <input type="text" class="form-control" placeholder="Enter your first name" required> 
+                    </div>
+
+                    <div>
+                        <label>Last Name *</label>
+                        <input type="text" class="form-control" placeholder="Enter your last name" required>
+                    </div>
+
+                    <div>
+                        <label>Email *</label>
+                        <input type="email" class="form-control" placeholder="Enter your email address" required>
+                    </div>
+
+
+                    <diV>
+                        <label>Password</label>
+                        <input type="password" id="password-field1" class="form-control" placeholder="Enter your password">
+                        <span toggle="#password-field1" class="toggle-password eye"><img src="images/front/eye.png"></span>
+                    </diV>
+
+                    <diV>
+                        <label>Confirm Password</label>
+                        <input type="password" id="password-field2" class="form-control" placeholder="Re-enter your password">
+                        <span toggle="#password-field2" class="toggle-password eye"><img src="images/front/eye.png"></span>
+                    </diV>
+
+                    <button type="submit">SIGN UP</button>
+                    <h4>Already have an account?<a href="login.html" style="color: #6255a5;"> Login</a></h4>
+                </form>
+        </div>
+
+        <!--JQuery-->
+        <script src="js/jquery.js"></script>
+
+        <!--bootstarp js-->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+
+        <!--Custom JS-->
+        <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,344 @@
+/* ===================================
+    Default Theme
+    ----------------------------------
+    Fonts : Open Sans
+    ----------------------------------
+    Colors:
+        White:           #fff
+        Black:           #000
+        Rich Blue:       #6255a5
+        Night Rider:     #333333
+    ----------------------------------
+    Description
+    ----------------------------------
+    All basic forms css 
+    media query css
+=================================== */
+
+
+/* ===================================
+            Html,Body
+=================================== */
+
+html,
+body {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+label {
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+
+/* ===================================
+            Basic form
+=================================== */
+body {
+    background-image: url("../images/pre-login/banner-with-overlay.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #6255a5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container { 
+    width: 580px;
+}
+
+.content-logo {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.form-content {
+    background-color: #fff;
+    padding: 8.62%;
+    border-radius: 4px;
+}
+
+.form-content h2 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 38px;
+    color: #6255a5;
+    text-align: center;
+    margin-bottom: 10PX;
+}
+
+.form-content P {
+    font-size: 15px;
+    line-height: 19px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 45PX;
+}
+
+.form-content label {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.form-content .form-control {
+    border: 1px solid #6255a5;
+    height: 50px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #000;
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.form-content #forgot-pass {
+    color: #6255a5;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    text-decoration: none;
+}
+
+.form-content .check-box {
+    display: flex; 
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.form-content .check-box span {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+}
+
+.form-content button {
+    background-color: #6255a5;
+    width: 100%;
+    height: 50px;
+    border-radius: 3px;
+    color:#fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    border: transparent;
+}
+
+.form-content h4 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #333333;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.form-content input[type="checkbox"]{
+    border: 1px solid #d1d1d1;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    margin-right: 10px;
+}
+
+.form-content input::placeholder {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #8a8a8a;
+}
+
+.eye {
+    float: right;
+    margin-right: 15px;
+    margin-top: -68px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+
+/* ===================================
+            Media queries
+=================================== */
+@media (min-width: 1024px) and (max-width: 1599px){
+    
+    .form-container {
+        width: 470px;
+    }
+
+    .content-logo {
+        margin-bottom: 10px;
+    }
+
+    .form-content h2 {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 2px;
+    }
+
+    .form-content .form-control {
+        height: 40px;
+        margin-bottom: 20px;
+    }
+
+    .form-content h4 {
+        margin-top: 10px;
+    }
+
+    .form-content button {
+        height: 40px;
+    }
+
+    .form-content h4 {
+        margin-top: 5px;
+    }
+
+    .eye {
+        margin-top: -55px;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 1023px){
+    
+    .form-container {
+        width: 400px;
+    }
+
+    .content-logo {
+        margin-bottom: 10px;
+    }
+
+    .form-content h2 {
+        font-size: 28px;
+        line-height: 32px;
+        margin-bottom: 2px;
+    }
+
+    .form-content P {
+        font-size: 13px;
+        line-height: 19px;
+        margin-bottom: 35PX;
+        font-weight: 400;
+    }
+
+    .form-content label,
+    .form-content #forgot-pass {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 5px;
+    }
+
+    .form-content .form-control {
+        height: 40px;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+
+    .form-content input::placeholder,
+    .form-content h4,
+    .form-content .check-box span  {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .form-content h4 {
+        margin-top: 5px;
+    }
+
+    .eye {
+        margin-top: -50px;
+    }
+
+    .form-content button {
+        height: 40px;
+    }
+}
+
+@media (max-width: 424px) {
+    .form-container {
+        width: 300px;
+    }
+
+    .content-logo {
+        margin-bottom: 10px;
+    }
+
+    .form-content h2 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 2px;
+    }
+
+    .form-content P {
+        font-size: 11px;
+        line-height: 15px;
+        margin-bottom: 25PX;
+        font-weight: 400;
+    }
+
+    .form-content label,
+    .form-content #forgot-pass {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 5px;
+    }
+
+    .form-content .form-control {
+        height: 35px;
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 15px;
+    }
+
+    .form-content input::placeholder,
+    .form-content h4,
+    .form-content .check-box span  {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .form-content h4 {
+        margin-top: 5px;
+    }
+
+    .eye {
+        margin-right: 12px;
+        margin-top: -46px;
+    }
+
+    .form-content button {
+        font-size: 16px;
+        height: 35px;
+    }
+}
