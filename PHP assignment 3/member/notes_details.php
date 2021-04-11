@@ -114,7 +114,7 @@ else{
         <!--Navbar-->
         <nav class="navbar fixed-top navbar-expand-lg box white-nav-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="dashboard.php">
                     <img src="../images/home/logo.png" alt="NotesMarketPlace logo">
                 </a>
 
@@ -522,11 +522,13 @@ else{
                 else{
                     var r = confirm("Are you sure you want to download this paid note.\nPlease confirm.");
                     if (r == true) {
+                        $('body').css('cursor','wait');
                         note_id = <?php echo $note_id?>;
                         $("#download-btn").attr('disabled','disabled');
                         $.get("download.php",{note_id : note_id},function(){
                             $("#download-btn").removeAttr('disabled','disabled');
                             $("#ThanksModal").modal();
+                            $('body').css('cursor','default');
                         });
                     } 
                 }

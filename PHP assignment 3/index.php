@@ -1,3 +1,6 @@
+<?php 
+include 'functions.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -244,9 +247,9 @@
                     </div>
                     <div class="col-md-6 col-4 text-right">
                         <ul class="social-list">
-                            <li><a href="#"><img src="images/home/facebook.png" alt="facebook icon"></a></li>
-                            <li><a href="#"><img src="images/home/twitter.png" alt="twitter icon"></a></li>
-                            <li><a href="#"><img src="images/home/linkedin.png" alt="linkedin icon"></a></li>
+                            <li><a href=<?php echo GetfacebookURL();?>><img src="images/home/facebook.png" alt="facebook icon"></a></li>
+                            <li><a href=<?php echo GettwitterURL();?>><img src="images/home/twitter.png" alt="twitter icon"></a></li>
+                            <li><a href=<?php echo GetlinkedinURL();?>><img src="images/home/linkedin.png" alt="linkedin icon"></a></li>
                         </ul>
                     </div>
                 </div>

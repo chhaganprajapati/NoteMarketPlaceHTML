@@ -21,6 +21,7 @@ $professor   = $_POST['professor'];
 $sell_type   = $_POST['sell_type'];
 $sell_price  = $_POST['sell_price'];
 $note_status = $_POST['note_status'];
+$clone = $_POST['clone'];
 
 
 
@@ -103,7 +104,8 @@ if(isset($_FILES['upload_notes'])){
     for($i=0;$i<$totalfiles;$i++){
         $filename = $_FILES['upload_notes']['name'][$i];
         $note_type = explode(".",$filename);
-        if(end($note_type) != 'pdf'){
+        // echo end($note_type);
+        if($filename != '' && end($note_type) != 'pdf'){
             $error['notes'] = "File with only pdf format is allowed.";
             break;
         }
@@ -147,12 +149,12 @@ if(empty($error)){
                 confirmQuery($note_file_query);
             
                 $row = mysqli_fetch_array($note_file_query);
-                $upload_notes = $row['NoteFile'];
+                echo $upload_notes = $row['NoteFile'];
             }
             else{
                 // Looping over all notes files
                 for($i=0;$i<$totalfiles;$i++){
-                    $filename_filter[$i] = str_replace('_', '', $_FILES['upload_notes']['name'][$i]);
+                    $filename_filter[$i] = str_replace('_','', $_FILES['upload_notes']['name'][$i]);
                     $filename = $user_id.'_'.$date.'_'.$filename_filter[$i];
                         
                     // Upload files and store in database

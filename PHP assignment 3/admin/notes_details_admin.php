@@ -41,7 +41,7 @@ while($row = mysqli_fetch_array($notes_details_query)){
         $preview_file = "../images/uploads/note_preview/$note_preview#scrollbar=0";
     }
     else{
-        $preview_file = "../images/front/sample.pdf#scrollbar=0";
+        $preview_file = "";
     }
 }
 
@@ -342,7 +342,12 @@ else{
                     <div class="col-md-5">
                         <h2>Notes Preview</h2>
                         <div id="pdf">
-                            <iframe src=<?php echo $preview_file;?>></iframe>
+                            <?php if(!empty($preview_file)){?>
+                                <iframe src=<?php echo $preview_file;?>></iframe>
+                            <?php }
+                            else{
+                                echo '<h5>Preview file is not available</h5>';
+                            }?>
                         </div>
                     </div>
 

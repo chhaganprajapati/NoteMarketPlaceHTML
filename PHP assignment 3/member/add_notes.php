@@ -41,6 +41,7 @@ if(isset($_GET['note_id'])){
 
     if(isset($_GET['clone'])){
         unset($note_id);
+        $clone = $_GET['clone'];
     }
 
     if($sell_type == 0)
@@ -185,8 +186,9 @@ if(isset($_POST['submit-btn']) || isset($_POST['publish-btn'])){
                     </div>
 
                     
-                    <input type="hidden" name="note_id" value="<?php echo isset($note_id) ? $note_id : '' ?>">
-                    <input type="hidden" name="note_status" value="<?php echo isset($note_status) ? $note_status : '' ?>">
+                    <input type="hidden" name="note_id" value=<?php echo isset($note_id) ? $note_id : '';?>>
+                    <input type="hidden" name="note_status" value=<?php echo isset($note_status) ? $note_status : ''; ?>>
+                    <input type="hidden" name="clone" value=<?php echo isset($clone) ? $clone : '';?>>
                 
                     
                     <div class="row">
@@ -451,7 +453,7 @@ if(isset($_POST['submit-btn']) || isset($_POST['publish-btn'])){
                 </div>
                 <?php 
                 if(!isset($_GET['view'])){
-                    if(empty($note_status) || isset($clone)){?>
+                    if(empty($note_status) || !empty($clone)){?>
                         <button id="submit-btn" name="submit-btn">SAVE</button>
                     <?php 
                     }
