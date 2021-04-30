@@ -2,10 +2,69 @@
 include 'Database/database.php';
 session_start();
 
+if(isset($_COOKIE['member_login']) && isset($_COOKIE['member_pass'])){
+
+    $email = $_COOKIE['member_login'];
+    $password = $_COOKIE['member_pass'];
+
+    $query = "SELECT * FROM user WHERE  EmailID = '$email'";
+    $select_user_query = mysqli_query($connection, $query);
+
+    if(!$select_user_query){
+        die("Query Failed". mysqli_error($connection));
+    }
+
+    while($row = mysqli_fetch_array($select_user_query)) {
+        $db_UserID = $row['UserID'];
+        $db_ROleID = $row['RoleID'];
+        $modified_date = $row['ModifiedDate'];
+        $isactive = $row['IsActive'];
+    }
+
+    if($isactive == 1){
+
+        if($db_ROleID == 3){
+            $_SESSION['user_id']  =  $db_UserID;
+            if(empty($modified_date)){
+                header("Location: member/user_profile.php");
+            }
+            else{
+                header("Location: member/search_notes.php");
+            }
+            
+        }
+        else {
+            $_SESSION['admin_id']  =  $db_UserID;
+            if($db_ROleID == 1){
+                $query = "SELECT * FROM systemtable WHERE SystemID = 1";
+                $get_systemdata_query = mysqli_query($connection,$query);
+                if(!$get_systemdata_query){
+                    die("Query Failed". mysqli_error($connection));
+                }
+
+                if(mysqli_num_rows($get_systemdata_query) > 0){
+                    header("Location: admin/dashboard_admin.php");
+                }
+                else{
+                    header("Location: admin/system_configuration.php");
+                }
+            }
+            else{
+                header("Location: admin/dashboard_admin.php");
+                                           
+            }
+        }
+    }
+    else{
+        $account_error = "Your account is Deactivated!!";
+    }
+
+}
+
 if(isset($_POST['submit']))
 {
     $email = strtolower(trim($_POST['email']));
-    $password = trim($_POST['password']);
+    $password = trim($_POST['password']);   
 
     $email = mysqli_real_escape_string($connection, $email);
     $password = mysqli_real_escape_string($connection, $password);
@@ -33,6 +92,13 @@ if(isset($_POST['submit']))
         if($isactive == 1){
             if($password === $db_Password){
                 if($isemailverified == 1){
+
+                    
+                    if(isset($_POST['remember'])){
+                        setcookie ("member_login",$email,time()+ (10 * 365 * 24 * 60 * 60));
+                        setcookie ("member_pass",$password,time()+ (10 * 365 * 24 * 60 * 60));
+                    }
+
             
                     if($db_ROleID == 3){
                         $_SESSION['user_id']  =  $db_UserID;
@@ -61,8 +127,7 @@ if(isset($_POST['submit']))
                             }
                         }
                         else{
-                            header("Location: admin/dashboard_admin.php");
-                                                       
+                            header("Location: admin/dashboard_admin.php");                                   
                         }
                     }
                 }
@@ -89,27 +154,8 @@ if(isset($_POST['submit']))
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!--Title-->
-        <title>NotesMarketPlace-Login</title>
-
-        <!--Meta tags-->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!--Favicon-->
-        <link rel="icon" href="images/favicon.ico">
-
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-        <!--bootstarp css-->
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-
-        <!--Custom css-->
-        <link rel="stylesheet" href="css/form-style.css">
-    </head>
+<?php $title = 'Login';
+    include 'includes/header.php';?>
     <body>
 
             <!-- login form -->
@@ -157,7 +203,7 @@ if(isset($_POST['submit']))
                     </div>
 
                     <div class="check-box">
-                        <input type="checkbox" class="ckeck mb-0">
+                        <input type="checkbox" name="remember" class="ckeck mb-0">
                         <span>Remember Me</span>
                     </div>
                     <div class="row">
@@ -170,13 +216,6 @@ if(isset($_POST['submit']))
                 </form>
         </div>
 
-        <!--JQuery-->
-        <script src="js/jquery.js"></script>
-
-        <!--bootstarp js-->
-        <script src="js/bootstrap/bootstrap.min.js"></script>
-
-        <!--Custom JS-->
-        <script src="js/script.js"></script>
+        <?php include 'includes/footer_js.php';?>
     </body>
 </html>

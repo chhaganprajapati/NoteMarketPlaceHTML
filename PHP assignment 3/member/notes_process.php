@@ -143,7 +143,8 @@ if(empty($error)){
     if(isset($_POST['submit-btn'])){
 
         if(!empty($note_id)){
-            if(!isset($_FILES['upload_notes'])){
+            if(empty($_FILES['upload_notes']['name'][0])){
+                echo 'success';
                 $query = "SELECT NoteFile FROM notes WHERE NoteID = $note_id";
                 $note_file_query = mysqli_query($connection,$query);
                 confirmQuery($note_file_query);
@@ -216,7 +217,7 @@ if(empty($error)){
 
     if(isset($_POST['publish-btn'])){
 
-        if(!isset($_FILES['upload_notes'])){
+        if(empty($_FILES['upload_notes']['name'][0])){
             $query = "SELECT NoteFile FROM notes WHERE NoteID = $note_id";
             $note_file_query = mysqli_query($connection,$query);
             confirmQuery($note_file_query);

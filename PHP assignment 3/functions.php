@@ -241,7 +241,7 @@ function GetlinkedinURL(){
 
 function GettwitterURL(){
     global $connection;
-    $query = "SELECT TwitterURL FROM systemtable WHERE SystemID = 2";
+    $query = "SELECT TwitterURL FROM systemtable WHERE SystemID = 1";
     $profile_query = mysqli_query($connection,$query);
     confirmQuery($profile_query);
 
